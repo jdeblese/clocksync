@@ -34,6 +34,6 @@ What this code does:
     implement an integrator. Properly weighted, this makes it possible to compensate
     for the offset between the two clocks, allowing the system to lock with zero phase
     error.
-
-Possible improvements include: a better feedback controller; an additional feed-forward
-controller with a model of the clock, to reduce the need for feedback.
+  * A fixed bias is also included, which without additional feedback will set the
+    VCO to about 1.5 kHz. This improves the speed of locking, but could be replaced with
+    a forward-fed measurement of the reference clock frequency.
